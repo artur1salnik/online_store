@@ -10,7 +10,7 @@
             <div id="sidebar">
                 <h3 style="text-align: center">Каталог товаров</h3>
                 <div class="list-group">
-                        <a style="text-decoration: none; color: black" href="{% url "shop:product_list" %}"><button type="button" class="list-group-item list-group-item-action" {% if not category %}class="selected"{% endif %}>Все товары</button></a>
+                        <a style="text-decoration: none; color: black" href="{% url 'shop:product_list' %}"><button type="button" class="list-group-item list-group-item-action" {% if not category %}class="selected"{% endif %}>Все товары</button></a>
                     {% for c in categories %}
                         <a  style="text-decoration: none; color: black" href="{{ c.get_absolute_url }}"><button type="button" class="list-group-item list-group-item-action" {% if category.slug == c.slug %}class="selected"{% endif %}>{{ c.name }}</button></a>
                     {% endfor %}
