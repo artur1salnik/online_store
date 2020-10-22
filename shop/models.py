@@ -41,19 +41,3 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('shop:product_detail', args=[self.id, self.slug])
-
-
-# class ProductImage(models.Model):
-#     product = models.ForeignKey(Product, blank=True, null=True, default=None, on_delete=models.CASCADE)
-#     image = models.ImageField(upload_to='media_products/')
-#     is_main = models.BooleanField(default=False)
-#     is_active = models.BooleanField(default=True)
-#
-#     def __str__(self):
-#         return "%s" % self.id
-#
-#     class Meta:
-#         verbose_name = 'Фотография'
-#         verbose_name_plural = 'Фотографии'
-
-

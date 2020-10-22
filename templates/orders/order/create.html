@@ -15,11 +15,7 @@
         <p>Всего: {{ cart.get_total_price }} грн.</p>
     </div>
     <form action="." method="post" class="order-form m-3">
-<!--        <div class="form-group row">-->
-<!--            <label class="col-sm-2 col-form-label">-->
                 {{ form.as_p }}
-<!--            </label>-->
-<!--        </div>-->
         <p style="padding-bottom: 3rem"><input type="submit" value="Заказать"></p>
         {% csrf_token %}
     </form>
